@@ -24,6 +24,6 @@ public class ledOn extends InstantCommand {
   public void initialize() {
     if(color.equals("Green")) m_Controller.setGreen(true);
     if(color.equals("Red")) m_Controller.setRed(true);
-    if(color.equals("Yellow")) 
+    if(color.equals("Yellow")) m_Controller.setYellow(true);;
   }
 }
