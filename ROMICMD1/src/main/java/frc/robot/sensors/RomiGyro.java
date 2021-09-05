@@ -2,13 +2,13 @@
 // Open Source Software; you can modify and/or share it under the terms of
 // the WPILib BSD license file in the root directory of this project.
 
-package frc.robot.util;
+package frc.robot.sensors;
 
 import edu.wpi.first.hal.SimDevice;
 import edu.wpi.first.hal.SimDevice.Direction;
 import edu.wpi.first.hal.SimDouble;
 
-public class Gyro {
+public class RomiGyro {
   private SimDouble m_simRateX;
   private SimDouble m_simRateY;
   private SimDouble m_simRateZ;
@@ -20,8 +20,8 @@ public class Gyro {
   private double m_angleYOffset;
   private double m_angleZOffset;
 
-  /** Create a new Gyro. */
-  public Gyro() {
+  /** Create a new RomiGyro. */
+  public RomiGyro() {
     SimDevice gyroSimDevice = SimDevice.create("Gyro:RomiGyro");
     if (gyroSimDevice != null) {
       gyroSimDevice.createBoolean("init", Direction.kOutput, true);
